@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Clases Disponibles</title>
+</head>
+<body>
+    <h1>Clases Disponibles</h1>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Cupos Disponibles</th>
+        </tr>
+        <tr th:each="clase : ${clases}">
+            <td th:text="${clase.nombre}"></td>
+            <td th:text="${clase.descripcion}"></td>
+            <td th:text="${clase.cuposDisponibles}"></td>
+        </tr>
+    </table>
+    <a href="/">Volver</a>
+</body>
+</html>

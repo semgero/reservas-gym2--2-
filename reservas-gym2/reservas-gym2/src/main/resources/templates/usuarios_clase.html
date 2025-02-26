@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Usuarios en Clase</title>
+</head>
+<body>
+    <h1>Usuarios en Clase: <span th:text="${clase.nombre}"></span></h1>
+    <table border="1">
+        <tr>
+            <th>Nombre de Usuario</th>
+        </tr>
+        <tr th:each="reserva : ${clase.reservas}">
+            <td th:text="${reserva.usuario.username}"></td>
+        </tr>
+    </table>
+    <a href="/admin/clases">Volver</a>
+</body>
+</html>

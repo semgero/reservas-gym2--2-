@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Panel de Administración</title>
+</head>
+<body>
+    <h1>Panel de Administración</h1>
+    <p>Bienvenido, <span th:text="${usuario.username}"></span></p>
+    <a href="/admin/clases">Gestionar Clases</a>
+    <a href="/logout">Cerrar Sesión</a>
+</body>
+</html>

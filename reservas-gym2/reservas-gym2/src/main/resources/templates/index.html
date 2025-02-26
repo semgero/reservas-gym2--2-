@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>GymLife - Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido a GymLife</h1>
+    <div th:if="${usuario}">
+        <p>Usuario: <span th:text="${usuario.username}"></span></p>
+        <a href="/clases">Ver Clases Disponibles</a>
+        <a href="/logout">Cerrar Sesión</a>
+    </div>
+    <div th:unless="${usuario}">
+        <a href="/login">Iniciar Sesión</a>
+    </div>
+</body>
+</html>
